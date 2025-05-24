@@ -1,0 +1,66 @@
+[project]
+name = "notebook-project"
+version = "0.1.0"
+description = "Python project with UV and Jupyter Notebook"
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "jupyter>=1.0.0",
+    "jupyterlab>=4.0.0",
+    "notebook>=7.0.0",
+    "ipykernel>=6.0.0",
+    "ipywidgets>=8.0.0",
+    "matplotlib>=3.5.0",
+    "seaborn>=0.11.0",
+    "pandas>=2.0.0",
+    "numpy>=1.21.0",
+    "scipy>=1.9.0",
+    "scikit-learn>=1.1.0",
+    "plotly>=5.0.0",
+    "requests>=2.28.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=22.0.0",
+    "isort>=5.10.0",
+    "flake8>=4.0.0",
+    "mypy>=0.950",
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+    "pre-commit>=2.17.0",
+]
+ml = [
+    "torch>=2.0.0",
+    "tensorflow>=2.10.0",
+    "transformers>=4.20.0",
+    "datasets>=2.0.0",
+]
+viz = [
+    "bokeh>=2.4.0",
+    "altair>=4.2.0",
+    "dash>=2.5.0",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "black>=22.0.0",
+    "isort>=5.10.0",
+    "flake8>=4.0.0",
+    "mypy>=0.950",
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
